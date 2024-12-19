@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <div class="div1">
+        <div class="pageTitle">
+            <a href="{{ url_for('index') }}">PageRank Algorithm By Yassine</a>
+        </div>
+        <div class="divButtons">
+            <div class="left-buttons">
+                <button id="addEdges_button">Add edges</button>
+                <button id="clear_button" data-url="{{ url_for('index') }}">Clear</button>
+            </div>
+            <div class="right-buttons">
+                <input id="numberN_button" type="number" placeholder="Number of pages" disabled>
+                <button id="run_button" class="btn-run">Run</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="graphArea" class="webGraph" onclick="addPage(event)">
+        <svg id="arrowLayer" width="100%" height="100%" style="position:absolute; top:0; left:0;">
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+                </marker>
+            </defs>
+        </svg>
+        <p id="placeholder">Click to add a page</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='JS/script1.js') }}"></script>
+
+    <div id="result"></div>
+
+{% endblock %}

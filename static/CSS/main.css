@@ -1,0 +1,136 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.content-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.div1 {
+    height: 20%;
+    width: 100%;
+    background-color: #717473;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers title and buttons vertically */
+}
+
+.pageTitle {
+    text-align: center;
+}
+
+.pageTitle a {
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+
+.divButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px; /* Limit the width so it doesn't stretch too much */
+    padding-top: 20px; /* Space between title and buttons */
+}
+
+.left-buttons, .right-buttons {
+    display: flex;
+    gap: 2px; /* Reduced the gap to bring buttons closer together */
+}
+
+/* Button style */
+#addEdges_button , #clear_button{
+   background-color: #008000; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Animation for hover */
+}
+.btn-run {
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #3eff37;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+.btn-run span {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background: #3eff37;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.5s ease-out;
+    text-transform: uppercase;
+}
+.btn-run:hover span {
+    width: 100%;
+}
+
+#addEdges_button:hover, #clear_button:hover {
+    background-color: #006400; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+#addEdges_button.clear ,#clear_button.clear  {
+            background-color: #006400;
+        }
+
+
+.webGraph {
+    height: 80%;
+    width: 100%;
+    background-color: #e0e0e0; /* Optional */
+}
+
+/* Circle Style */
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: lightblue;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+    border: 2px solid #000; /* Optional */
+}
+#graphArea {
+    position: relative; /* Ajoutez ceci */
+    width: 100%; /* Ajustez en fonction de votre design */
+    height: 600px; /* Ajustez en fonction de votre design */
+    border: 1px solid #ccc; /* Pour voir les limites */
+    overflow: hidden; /* Pour éviter les débordements */
+    align-items: center;
+    justify-content: center; /* Centers title and buttons vertically */
+
+}
+
+ #placeholder {
+    font-family: cursive;
+    font-size: 20px;
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+
+
